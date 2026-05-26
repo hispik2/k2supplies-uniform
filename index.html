@@ -1,0 +1,311 @@
+<!DOCTYPE html> 
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Class Supplies & Uniform Purchase K2</title>
+
+<style>
+body { font-family: Arial; background:#f5f5f5; }
+.container { width:600px; margin:40px auto; background:#fff; padding:20px; border-radius:10px; }
+
+.logo { text-align:center; }
+.logo img { width:110px; margin-bottom:10px; }
+
+h2 { text-align:center; font-size:18px; }
+
+select, input[type="file"] {
+  width:100%; padding:8px; margin-top:5px; margin-bottom:15px;
+}
+
+table { width:100%; border-collapse:collapse; table-layout:fixed; }
+th { background:#007bff; color:white; }
+
+th, td {
+  border:1px solid #ddd;
+  padding:8px;
+  text-align:center;
+}
+
+input[type="number"] {
+  width:60px;
+  height:32px;
+  text-align:center;
+  border:1px solid #ccc;
+  border-radius:5px;
+}
+
+.size {
+  margin-top:5px;
+  width:80%;
+}
+
+.total-box {
+  text-align:right;
+  font-weight:bold;
+  margin-top:10px;
+}
+
+.transfer {
+  background:#f3e7c3;
+  padding:10px;
+  margin-top:15px;
+  border-radius:5px;
+}
+
+button {
+  width:100%;
+  padding:12px;
+  margin-top:15px;
+  background:#007bff;
+  color:white;
+  border:none;
+  border-radius:5px;
+  cursor:pointer;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<div class="logo">
+  <img src="https://lh3.googleusercontent.com/d/1IiZ9rKHMOz4VA8Llou67FCBgP7J7Jl16" alt="Logo">
+</div>
+
+<h2>Class Supplies & Uniform Purchase E-Form HIS PIK2<br>K2 2026/2027</h2>
+
+<label>Student's Name</label>
+<select id="nama">
+  <option value="">Choose Name</option>
+  <option>Callia Avery Rose</option>
+  <option>Chloe Eleanor Wynne</option>
+  <option>Ecclesie Philea Kartadjaja</option>
+  <option>Elsheena Sharon Daniella</option>
+  <option>Ethan Edvard Tjoe</option>
+  <option>Lucas Kusuma</option>
+  <option>Raphael Arthur Susindra</option>
+  <option>Ying Jiayu</option>
+</select>
+
+<table>
+<tr>
+<th>Item</th>
+<th>Price (IDR)</th>
+<th>Qty</th>
+<th>Total</th>
+</tr>
+
+<tr><td>Communication Book</td><td class="harga">35000</td><td><input type="number" min="0" value="0" onchange="hitungTotal()"></td><td class="total">0</td></tr>
+<tr><td>Reading Log </td><td class="harga">30000</td><td><input type="number" min="0" value="0" onchange="hitungTotal()"></td><td class="total">0</td></tr>
+<tr><td>Large Dotted Third Notebook  </td><td class="harga">25000</td><td><input type="number" min="0" value="0" onchange="hitungTotal()"></td><td class="total">0</td></tr>
+<tr><td>Button File Folder Red</td><td class="harga">5000</td><td><input type="number" min="0" value="0" onchange="hitungTotal()"></td><td class="total">0</td></tr>
+<tr><td>Button File Folder Blue</td><td class="harga">5000</td><td><input type="number" min="0" value="0" onchange="hitungTotal()"></td><td class="total">0</td></tr>
+<tr><td>Report Folder</td><td class="harga">90000</td><td><input type="number" min="0" value="0" onchange="hitungTotal()"></td><td class="total">0</td></tr>
+<tr><td>Portfolio Book A3</td><td class="harga">65000</td><td><input type="number" min="0" value="0" onchange="hitungTotal()"></td><td class="total">0</td></tr>
+
+<tr>
+<td>Subscription BukuAku</td>
+<td class="harga">159000</td>
+<td><input type="number" value="1" readonly></td>
+<td class="total">159000</td>
+</tr>
+
+<tr>
+<td>
+  Kindy Polo Dri-Fit<br>
+  <select class="size">
+    <option value="">Size</option>
+    <option>2</option><option>4</option><option>6</option><option>8</option>
+  </select>
+</td>
+<td class="harga">160000</td>
+<td><input type="number" min="0" value="0" onchange="hitungTotal()"></td>
+<td class="total">0</td>
+</tr>
+
+<tr>
+<td>
+  Kindy Shorts/ Skorts<br>
+  <select class="size">
+    <option value="">Size</option>
+    <option>2</option><option>4</option><option>6</option><option>8</option>
+  </select>
+</td>
+<td class="harga">95000</td>
+<td><input type="number" min="0" value="0" onchange="hitungTotal()"></td>
+<td class="total">0</td>
+</tr>
+
+<tr>
+<td>
+  Socks<br>
+  <select class="size">
+    <option value="">Size</option>
+    <option>15</option><option>17</option><option>19</option>
+  </select>
+</td>
+<td class="harga">28000</td>
+<td><input type="number" min="0" value="0" onchange="hitungTotal()"></td>
+<td class="total">0</td>
+</tr>
+
+<tr>
+<td>
+  Theme Shirt<br>
+  <select class="size">
+    <option value="">Size</option>
+    <option>2</option><option>4</option><option>6</option><option>8</option>
+  </select>
+</td>
+<td class="harga">165000</td>
+<td><input type="number" min="0" value="0" onchange="hitungTotal()"></td>
+<td class="total">0</td>
+</tr>
+
+<tr>
+<td>
+  Hat<br>
+  <select class="size">
+    <option value="">Size</option>
+    <option>S</option><option>M</option><option>L</option>
+  </select>
+</td>
+<td class="harga">185000</td>
+<td><input type="number" min="0" value="0" onchange="hitungTotal()"></td>
+<td class="total">0</td>
+</tr>
+
+<tr><td>Backpack</td><td class="harga">210000</td><td><input type="number" min="0" value="0" onchange="hitungTotal()"></td><td class="total">0</td></tr>
+
+</table>
+
+<div class="total-box">
+Total: IDR <span id="grandTotal">0</span>
+</div>
+
+<div class="transfer">
+Please transfer to:<br>
+<b>CIMB Niaga 8001 9625 8100<br>a/n Yayasan Pendidikan Pelita Harapan Tangerang</b>
+</div>
+
+<label>Upload Proof of Transfer</label>
+<input type="file" id="bukti">
+
+<button onclick="submitForm()">Submit</button>
+
+</div>
+
+<script>
+
+// ✅ TANPA TITIK RIBUAN
+function formatRupiah(angka) {
+  return angka.toString();
+}
+
+function hitungTotal() {
+  let rows = document.querySelectorAll("table tr");
+  let grandTotal = 0;
+
+  for (let i = 1; i < rows.length; i++) {
+    let harga = parseInt(rows[i].querySelector(".harga").innerText);
+    let input = rows[i].querySelector("input");
+    let qty = parseInt(input.value) || 0;
+
+    if (rows[i].innerText.includes("Subscription BukuAku")) {
+      qty = 1;
+      input.value = 1;
+    }
+
+    let total = harga * qty;
+    rows[i].querySelector(".total").innerText = formatRupiah(total);
+    grandTotal += total;
+  }
+
+  document.getElementById("grandTotal").innerText = formatRupiah(grandTotal);
+}
+
+function toBase64(file) {
+  return new Promise((resolve, reject) => {
+    const reader = new FileReader();
+    reader.readAsDataURL(file);
+    reader.onload = () => resolve(reader.result.split(',')[1]);
+    reader.onerror = reject;
+  });
+}
+
+const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbxlSZkXXHAQ1IIyCiU48WXbtaz3zVZ70GGGFYWgkRuwyjxMiuwYr-aFH5YyBrNK6tLm/exec";
+
+async function submitForm() {
+  const nama = document.getElementById("nama").value;
+  if (!nama) return alert("Please select student name");
+
+  let rows = document.querySelectorAll("table tr");
+
+  let data = {
+    nama: nama,
+    items: [],
+    total: document.getElementById("grandTotal").innerText
+  };
+
+  for (let i = 1; i < rows.length; i++) {
+
+    let itemCell = rows[i].children[0];
+    let itemName = itemCell.childNodes[0].textContent.trim();
+
+    let sizeSelect = itemCell.querySelector(".size");
+    let size = sizeSelect ? sizeSelect.value : "";
+
+    let input = rows[i].querySelector("input");
+    let qty = parseInt(input.value) || 0;
+
+    if (sizeSelect && qty > 0 && !size) {
+      return alert("Please select size for " + itemName);
+    }
+
+    let item = size ? itemName + " (Size " + size + ")" : itemName;
+
+    let harga = rows[i].children[1].innerText;
+    let total = rows[i].children[3].innerText;
+
+    data.items.push({ item, harga, qty, total });
+  }
+
+  const fileInput = document.getElementById("bukti");
+
+  if (fileInput.files.length > 0) {
+    const file = fileInput.files[0];
+    data.file = await toBase64(file);
+    data.fileName = file.name;
+    data.fileType = file.type;
+  }
+
+  try {
+    const res = await fetch(SCRIPT_URL, {
+      method: "POST",
+      body: JSON.stringify(data),
+      headers: {
+        "Content-Type": "text/plain;charset=utf-8"
+      }
+    });
+
+    const result = await res.text();
+
+    if (result.includes("SUCCESS")) {
+  alert("✅ Data submitted successfully!");
+} else {
+  alert("❌ Server error: " + result);
+}
+
+  } catch (err) {
+    alert("❌ Error sending data: " + err.message);
+  }
+}
+
+window.onload = hitungTotal;
+
+</script>
+
+</body>
+</html>
